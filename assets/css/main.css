@@ -4079,3 +4079,141 @@ body.is-touch #banner {
 				}
 
 }
+
+/* Portfolio Filter Section */
+
+.portfolio {
+	padding: 2em 0 4em 0;
+	background: transparent;
+	text-align: center;
+}
+
+.portfolio .major h2 {
+	color: #ffffff;
+	font-size: 2.4em;
+	margin-bottom: 0.4em;
+}
+
+.portfolio .major h2 span {
+	color: #b983ff;
+}
+
+.portfolio .major:after {
+	background: #b983ff;
+}
+
+.gallery .controls {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2em 0;
+	display: flex;
+	justify-content: center;
+	gap: 0.75em;
+	flex-wrap: wrap;
+}
+
+.gallery .controls .button {
+	border: 2px solid #b983ff;
+	color: #b983ff !important;
+	background: transparent;
+	padding: 0.7em 1.4em;
+	cursor: pointer;
+	font-size: 1em;
+	text-transform: none;
+	box-shadow: none;
+	height: auto;
+	line-height: 1.2em;
+}
+
+.gallery .controls .button.active,
+.gallery .controls .button:hover {
+	background: #b983ff;
+	color: #ffffff !important;
+}
+
+.gallery .box-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.portfolio-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.35em;
+	min-height: 300px;
+	background: #222;
+}
+
+.project-card {
+	position: relative;
+	display: block;
+	height: 100%;
+	border: 0;
+	overflow: hidden;
+}
+
+.project-card img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.project-card .content {
+	position: absolute;
+	inset: 0;
+	background: rgba(39, 73, 96, 0.88);
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2em;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+
+.project-card:hover img {
+	transform: scale(1.08);
+}
+
+.project-card:hover .content {
+	opacity: 1;
+}
+
+.project-card .content h4 {
+	color: #ffffff;
+	font-size: 1.2em;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	margin: 0 0 0.75em 0;
+}
+
+.project-card .content p {
+	color: #ffffff;
+	font-size: 0.95em;
+	margin: 0;
+	line-height: 1.6em;
+}
+
+@media screen and (max-width: 980px) {
+	.gallery .box-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.gallery .box-container {
+		grid-template-columns: 1fr;
+	}
+
+	.project-card img {
+		height: 250px;
+	}
+}
